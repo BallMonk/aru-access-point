@@ -1,0 +1,27 @@
+module types {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/types";
+  
+  prefix "types";
+  
+  organization
+    "";
+    
+  contact
+    "";
+    
+  description
+    "common types are defined in this module.";
+  
+  typedef mac-address {
+    type string {
+      pattern '^[0-9a-fA-F]{2}(:[0-9a-fA-F]{2}){5}$';
+    }
+    description
+      "An IEEE 802 MAC address";
+  }
+  
+}
+
+
