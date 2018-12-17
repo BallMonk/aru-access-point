@@ -1,0 +1,9 @@
+module Client {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/Client/Client";
+  
+  prefix "Client";
+  
+  
+}
