@@ -1,0 +1,9 @@
+module Types {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/Types/Types";
+  
+  prefix "Types";
+  
+  
+}
