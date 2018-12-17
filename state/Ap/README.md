@@ -1,4 +1,4 @@
-AP (access point)
+AP (access point) moudle
 ---
 
 When we say state of access point, it may include lots of state of different submodules.
