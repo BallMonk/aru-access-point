@@ -5,5 +5,43 @@ module Wlan {
   
   prefix "Wlan";
   
+  organization
+    "";
+    
+  contact
+    "";
+    
+  description
+    "This module defines the wireless lan of the access point,
+    we can not ignore the implementation on access point";
+  
+  grouping wlan-top {
+    description
+      "top level of the hierarcgy.";
+      
+    list wlan {
+      key "essid name";
+      description
+        "we use essid and name to identify a wireless lan.";
+        
+      leaf essid {
+        type string;
+        description
+          "normally the essid is different between each wlan,
+          but in implementation we allow the same essid and use profile name to resolute them";
+      }
+      
+      leaf bssid_index {
+        type uint8;
+        description
+          "thought it is may not a good way that publish this private data to outside world,
+          It may a clear way to tell which bssid the wlan is on.";
+      }
+      
+      // to be more
+    
+    }
+  
+  }
   
 }
