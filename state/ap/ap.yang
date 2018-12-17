@@ -1,0 +1,9 @@
+module ap {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/ap/ap";
+  
+  prefix "ap";
+  
+  
+}
