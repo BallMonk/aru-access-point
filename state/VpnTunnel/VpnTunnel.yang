@@ -1,0 +1,9 @@
+module VpnTunnel {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/VpnTunnel/VpnTunnel";
+  
+  prefix "VpnTunnel";
+  
+  
+}
