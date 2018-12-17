@@ -1,0 +1,9 @@
+module cluster {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/claster/cluster";
+  
+  prefix "cluster";
+  
+  
+}
