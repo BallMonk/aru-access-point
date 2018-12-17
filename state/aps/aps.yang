@@ -1,9 +1,0 @@
-module aps {
-  yang-version "1";
-  
-  namespace "aru-access-point/state/aps/aps";
-  
-  prefix "aps";
-  
-  
-}
