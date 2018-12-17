@@ -1,0 +1,9 @@
+module Wlan {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/Wlan/Wlan";
+  
+  prefix "Wlan";
+  
+  
+}
