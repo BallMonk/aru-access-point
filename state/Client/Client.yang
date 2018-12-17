@@ -5,5 +5,49 @@ module Client {
   
   prefix "Client";
   
+  organization
+    "";
+    
+  contact
+    "";
+    
+  description
+    "This module defines state data of client on per access point.";
+    
+  grouping client-top {
+    description
+      "top level of the hierary data.";
+      
+    list client_info {
+      description
+        "This list give the information of each client.";
+      
+      leaf client_mac {
+        type "";
+        description
+          "identitier of a client as a L2 user, while a client may have more than one ip,
+          it mush have only one mac address." 
+      }
+      
+      leaf is_wired {
+        type boolean;
+        description
+          "when a client connects this access point via wlan, it is not a wired client;
+          and a wired client connects on the port directly, or pass by a switch.";
+      }
+      
+      leaf client_name {
+        type string;
+        description
+          "The name of the client. get from the client.";
+      }
+      
+      // more infomations
+      
+    }
+  
+  
+  }
+  
   
 }
