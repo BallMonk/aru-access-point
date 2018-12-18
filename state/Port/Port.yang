@@ -17,7 +17,7 @@ module Port {
     and sometime have no one such as mesh point without wired point";
     
   import types {
-    prefix "types";
+    prefix types;
   }
   
   grouping port-top {
