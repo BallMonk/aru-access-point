@@ -1,0 +1,52 @@
+module Port {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/Port/Port";
+  
+  prefix "Port";
+  
+  organization
+    "";
+    
+  contact
+    "";
+    
+  description
+    "This module defines wired port on access point,
+    usually we have at least one wired port on an access point as an uplink,
+    and sometime have no one such as mesh point without wired point";
+    
+  import types {
+    prefix "types";
+  }
+  
+  grouping port-top {
+    descriptoin
+      "port information group.";
+      
+    list ports {
+      key "interface_index";
+      
+      description
+        "There could be more than one wired port on an access point,
+        we use the interface index as the identifier of a port.";
+        
+      leaf interface_index {
+        type uint8 {
+          rang "0...7";
+          description
+            "interface_index is the index of wired port, we have 8 port at most.";
+        }
+        description
+          "we use a number index to locate the wired port interface but not the mac here.";
+      }
+      
+      leaf eth_mac {
+        type types:mac-address;
+      }
+    }
+    
+    // more
+    
+  }  
+}
