@@ -1,0 +1,50 @@
+module access-point {
+  yang-version "1";
+  
+  namespace "aru-access-point/state/access-point";
+  
+  prefix "access-point";
+  
+  organization 
+    "";
+  
+  contact
+    "";
+    
+  description
+    "access point moduel is a description with many submodules in logic,
+    we try to divese it into many modules.
+    In module access-point we just define the base information of access points.";
+    
+  import types { prefix types; }
+  import Port { prefix Port; }
+    
+  grouping access-points-top {
+    description 
+      "Top level of the hierarchy and the root of tree.";
+      
+    list access-point {
+      key "serial_number";
+      description 
+        "we use serial number as identifier,
+        we can see the indentifier used on central.";
+        
+      leaf serial_number {
+        type string;
+        description
+          "serial number is a string, and we define it's regular expression in further version.";
+      }
+      
+      leaf ap_mac {
+        type types:mac-address;
+      }
+      // more leaf
+      
+      uses Port:port-top;
+      // more modules
+      
+    }
+    
+  }
+  
+}
