@@ -13,22 +13,32 @@ module Wlan {
     
   description
     "This module defines the wireless lan of the access point,
-    we can not ignore the implementation on access point";
+    we regard per essid as one wlan.";
   
   grouping wlan-top {
     description
       "top level of the hierarcgy.";
       
     list wlan {
-      key "essid name";
+      key "ssid name";
       description
-        "we use essid and name to identify a wireless lan.";
+        "we use 'essidname' to identify a wireless lan.
+        We also call ssid as essid, which is allowed to be same between wlans.
+        So we need an other key. The 'name' is wlan profile's name.
+        Why not using 'name' alone? A:The ssid help to understand easier.
+        Come what may, can the 'ssid-name' maned 'ssid'? ";
         
-      leaf essid {
+      leaf ssid {
         type string;
         description
-          "normally the essid is different between each wlan,
+          "normally the ssid is different between each wlan,
           but in implementation we allow the same essid and use profile name to resolute them";
+      }
+      
+      leaf name {
+        type string;
+        description
+          "wlan policy name, it is not a good way to put the private data as ";
       }
       
       leaf bssid_index {
@@ -38,6 +48,12 @@ module Wlan {
           It may a clear way to tell which bssid the wlan is on.";
       }
       
+      leaf vlan {
+        type string;
+        description
+          "vlan of this wireless lan, we support that one wireless lan is in more than one vlan,
+          to tell the string format.";
+      }
       // to be more
     
     }
