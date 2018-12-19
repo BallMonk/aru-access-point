@@ -44,9 +44,8 @@ module Port {
       leaf eth_mac {
         type types:mac-address;
       }
+      // more to append
+      
     }
-    
-    // more
-    
   }  
 }
